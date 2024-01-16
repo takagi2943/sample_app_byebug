@@ -13,7 +13,6 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    byebug
     if @list.save
       redirect_to lists_path(@list)
     else
